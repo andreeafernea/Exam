@@ -290,7 +290,6 @@ main {
     font-family: ;
 }
 
-section {}
 
 article {
     padding-top: 8%;
@@ -302,23 +301,14 @@ article {
 /* Front-page content  
 --------------------------------------------------------------*/
 
-.index-img-mobile {
-    text-align: center;
-    background-image: url(../images/coffee-beans.jpeg);
-    background-repeat: no-repeat;
+.index-img-mobile img {
+    display: none;
 }
 
 .index-img-desktop img {
     width: 100%;
+    padding-top: 1%;
 }
-
-#logo-mobile {
-    display: none;
-    max-width: 40%;
-}
-
-
-.index-articles {}
 
 
 #about-us img {
@@ -334,11 +324,11 @@ article {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 10%;
-    
+
 }
 
 #coffee-month {
-    
+
     padding-top: 0px;
     background-color: #9f3435;
 
@@ -346,7 +336,7 @@ article {
 
 #coffee-month img {
 
-    padding-top: 2%;;
+    padding-top: 2%;
     width: 30%;
     float: right;
 
@@ -365,7 +355,7 @@ article {
 }
 
 #new-in-text {
-    width: 70%;
+    width: 100%;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
@@ -400,12 +390,93 @@ article {
 
 /* "Coffe Knowledge" content  
 --------------------------------------------------------------*/
+#job-text p {
+    width: 50%;
+    
+}
+#job-text {
+    padding-top: 7%
+}
+
+#ft-img {
+    float: right;
+    margin-right: 5%;
+}
+
+
 
 /* "About us" content
 --------------------------------------------------------------*/
 
+#bourbon-img img {
+    width: 100%;
+}
+
+#partners-img img {
+    padding-top: 2%;
+    padding-left: 1%;
+    width: 30%;
+    float: right;
+}
+
+#partners-text {
+    padding-bottom: 12%;
+
+}
+
 /* "Contact" content
 --------------------------------------------------------------*/
+
+#company-img img {
+    width: 100%;
+}
+
+
+#delivery-img img {
+
+    padding-top: 2%;
+    padding-left: 1%;
+    width: 30%;
+    float: right;
+
+}
+
+#return-text {
+
+    width: 70%;
+    padding-top: 5%;
+
+}
+
+
+#company-text h3 {
+    padding-top: 4%;
+}
+
+#return-img {
+    width: 80%;
+}
+
+/* Sections for pages
+----------------------------------------------------------- */
+
+.section-2 h1,
+.section-2 h3,
+.section-2 p {
+    color: white;
+}
+
+.section-1,
+.section-3 {
+    display: flex;
+}
+
+.section-2 {
+
+    padding-top: 0px;
+    background-color: #9f3435;
+}
+
 
 /* Footer  
 -----------------------------------------------------------------------------*/
@@ -419,12 +490,6 @@ footer {
     text-align: center;
 
 }
-
-footer p {}
-
-
-
-
 
 
 /* BREAKPOINTS
@@ -451,6 +516,15 @@ footer p {}
 
             padding-left: 0px;
         }
+        .index-img-desktop img {
+            display: none;
+        }
+        .index-img-mobile img {
+            display: block;
+            width: 100%;
+        }
+        /* Home page
+        -------------------------------------------------------------*/
         #about-us {
             display: block;
 
@@ -460,41 +534,90 @@ footer p {}
         }
         #coffee-month {
             display: block;
-            
+
 
         }
         #coffee-month img {
             padding-left: 30%;
             width: 70%;
         }
-        #coffee-month-text{ width: 100%;}
-        
+        #coffee-month-text {
+            width: 100%;
+        }
+
         #new-in {
             display: block;
         }
         #new-in img {
             width: 70%;
         }
-
-        footer {
+        /* Section for pages*/
+        .section-1 {
             display: block;
-            padding-bottom: 10px;
+        }
+        .section-2 {
+            display: block;
+        }
+        .section-3 {
+            display: block;
+        }
+
+        /*Contact Page
+        --------------------------------------------------------------*/
+        #company-img img {
+            width: 85%;
+        }
+
+        #delivery-img img {
+            padding-left: 30%;
+            width: 85%;
+            padding-top: 5%;
+            padding-bottom: 5%;
         }
 
     }
-    @media only screen and (max-width: 690px) {
-        .nav-desktop {
-            display: none;
-        }
-        .nav-mobile {
-            display: block;
-        }
-        #logo-mobile {
-            display: block;
-        }
-        /*makes the white logo + background photo aprear only on mobiles*/
+    #return-text {
+        width: 100%;
     }
-    @media only screen and (max-width: 580px) {
-        #basket {
-            padding-left: 42%;
-        }
+    /* About Page
+    -------------------------------------------------------------------*/
+    #bourbon-text {
+        padding: 0px;
+        width: 100%;
+    }
+    #bourbon-img img {
+        width: 85%;
+    }
+    #partners-img img {
+        width: 85%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    #map-img img {
+        width: 85%;
+    }
+    /* Footer
+    ---------------------------------------------------------------------*/
+    footer {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+
+}
+
+@media only screen and (max-width: 690px) {
+    .nav-desktop {
+        display: none;
+    }
+    .nav-mobile {
+        display: block;
+    }
+
+    /*makes the white logo + background photo aprear only on mobiles*/
+}
+
+@media only screen and (max-width: 580px) {
+    #basket {
+        padding-left: 42%;
+    }
